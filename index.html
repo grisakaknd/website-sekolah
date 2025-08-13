@@ -1,186 +1,110 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SMP Negeri 1 Kandangan</title>
-  <style>
-    :root{
-      --primary:#004aad;   /* Biru identitas */
-      --accent:#ffc400;    /* Kuning emas */
-      --text:#1a1a1a;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.6}
-    /* NAV */
-    .nav{position:sticky;top:0;z-index:50;background:var(--primary);color:#fff;border-bottom:4px solid var(--accent)}
-    .nav .wrap{display:flex;align-items:center;gap:14px;max-width:1100px;margin:auto;padding:8px 16px}
-    .nav img{height:42px;background:#fff;border-radius:10px;padding:4px}
-    .nav h1{font-size:18px;margin:0;white-space:nowrap}
-    .nav ul{list-style:none;margin:0 0 0 auto;padding:0;display:flex;flex-wrap:wrap;gap:10px}
-    .nav a{color:#fff;text-decoration:none;padding:8px 10px;border-radius:8px}
-    .nav a:hover{background:rgba(255,255,255,.15)}
-    /* HEADER */
-    header{
-      background:url('header.jpg') center/cover no-repeat;
-      color:#fff;text-align:center;padding:130px 20px;position:relative;
-    }
-    header .overlay{position:absolute;inset:0;background:rgba(0,0,0,.35)}
-    header .inner{position:relative;max-width:900px;margin:auto}
-    header h2{font-size:40px;margin:0 0 8px;text-shadow:2px 2px 6px rgba(0,0,0,.7)}
-    header p{margin:0;font-size:18px;text-shadow:1px 1px 3px rgba(0,0,0,.6)}
-    /* SECTIONS */
-    section{max-width:1000px;margin:0 auto;padding:40px 16px}
-    section h3{color:var(--primary);margin-top:0;border-left:8px solid var(--accent);padding-left:12px}
-    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-    .card{border:1px solid #e9e9e9;border-radius:12px;overflow:hidden;background:#fff}
-    .card img{width:100%;height:160px;object-fit:cover;display:block}
-    .card .body{padding:12px}
-    .badge{display:inline-block;background:var(--accent);color:#000;font-size:12px;padding:2px 8px;border-radius:999px;margin-bottom:6px}
-    /* GALLERY */
-    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
-    .gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;border:1px solid #eee}
-    /* FOOTER */
-    footer{background:var(--primary);color:#fff;text-align:center;padding:18px;margin-top:30px}
-    /* RESPONSIVE */
-    @media(max-width:720px){
-      .nav ul{gap:6px}
-      header h2{font-size:28px}
-      header{padding:90px 14px}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMP Negeri 1 Kandangan</title>
+<style>
+    body {font-family: Arial, sans-serif; margin:0; padding:0;}
+    header {background: url('header.jpg') no-repeat center/cover; color:white; text-align:center; padding:80px 20px;}
+    nav {background:#004080; padding:10px;}
+    nav ul {list-style:none; margin:0; padding:0; display:flex; justify-content:center; flex-wrap:wrap;}
+    nav li {margin: 0 10px;}
+    nav a {color:white; text-decoration:none; font-weight:bold;}
+    section {padding:20px; max-width:1000px; margin:auto;}
+    h2 {color:#004080;}
+    .cards {display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:20px;}
+    .card {border:1px solid #ccc; border-radius:8px; overflow:hidden;}
+    .card img {width:100%; height:150px; object-fit:cover;}
+    .card-content {padding:10px;}
+    footer {background:#004080; color:white; text-align:center; padding:10px;}
+</style>
 </head>
 <body>
+<header>
+    <img src="logo.png" alt="Logo Sekolah" style="width:100px;">
+    <h1>SMP Negeri 1 Kandangan</h1>
+    <p>Jl. Balun, Caruban, Kandangan</p>
+</header>
 
-  <!-- NAVBAR -->
-  <nav class="nav">
-    <div class="wrap">
-      <img src="logo.png" alt="Logo SMPN 1 Kandangan">
-      <h1>SMP Negeri 1 Kandangan</h1>
-      <ul>
-        <li><a href="#beranda">Beranda</a></li>
-        <li><a href="#visi-misi">Visi & Misi</a></li>
-        <li><a href="#profil">Profil</a></li>
-        <li><a href="#galeri">Galeri</a></li>
-        <li><a href="#update-grisaka">Update Grisaka</a></li>
-        <li><a href="#prestasi">Prestasi</a></li>
-        <li><a href="#kontak">Kontak</a></li>
-      </ul>
-    </div>
-  </nav>
+<nav>
+<ul>
+    <li><a href="#beranda">Beranda</a></li>
+    <li><a href="#visi-misi">Visi & Misi</a></li>
+    <li><a href="#profil">Profil</a></li>
+    <li><a href="#galeri">Galeri</a></li>
+    <li><a href="#update-grisaka">Update Grisaka</a></li>
+    <li><a href="#prestasi">Prestasi</a></li>
+    <li><a href="#kontak">Kontak</a></li>
+</ul>
+</nav>
 
-  <!-- HEADER / BERANDA -->
-  <header id="beranda">
-    <div class="overlay"></div>
-    <div class="inner">
-      <h2>SMP Negeri 1 Kandangan</h2>
-      <p>Temanggung • Sekolah Berkarakter, Berprestasi, Peduli Lingkungan</p>
-    </div>
-  </header>
+<section id="beranda">
+<h2>Beranda</h2>
+<p>Selamat datang di website resmi SMP Negeri 1 Kandangan.</p>
+</section>
 
-  <!-- VISI & MISI -->
-  <section id="visi-misi">
-    <h3>Visi</h3>
-    <p>Terwujudnya peserta didik yang bertakwa dan berakhlak mulia, berprestasi, terampil, berwawasan global serta peduli lingkungan.</p>
-    <h3>Misi</h3>
-    <ul>
-      <li>Menumbuhkan keimanan dan akhlak mulia dalam setiap kegiatan belajar dan pembiasaan.</li>
-      <li>Mendorong prestasi akademik dan non-akademik melalui pembelajaran aktif dan kompetitif.</li>
-      <li>Mengembangkan keterampilan abad 21: kolaborasi, kreativitas, komunikasi, dan berpikir kritis.</li>
-      <li>Membangun wawasan global dengan literasi digital dan kegiatan bertema internasional.</li>
-      <li>Membudayakan kepedulian lingkungan melalui program adiwiyata dan gerakan hijau.</li>
-    </ul>
-  </section>
+<section id="visi-misi">
+<h2>Visi & Misi</h2>
+<p><b>Visi:</b> Terwujudnya peserta didik yang bertakwa dan berakhlak mulia, berprestasi, terampil, berwawasan global serta peduli lingkungan.</p>
+</section>
 
-  <!-- PROFIL -->
-  <section id="profil">
-    <h3>Profil Singkat</h3>
-    <p>SMP Negeri 1 Kandangan merupakan sekolah menengah pertama di Kabupaten Temanggung dengan komitmen mencetak generasi cerdas, berkarakter, dan peduli lingkungan. Pembelajaran mengedepankan literasi, numerasi, dan proyek penguatan profil pelajar Pancasila.</p>
-  </section>
+<section id="profil">
+<h2>Profil Singkat</h2>
+<p>SMP Negeri 1 Kandangan adalah sekolah menengah pertama yang berkomitmen mencetak generasi berprestasi, berkarakter, dan siap bersaing di tingkat global.</p>
+</section>
 
-  <!-- GALERI -->
-  <section id="galeri">
-    <h3>Galeri</h3>
-    <div class="gallery">
-      <!-- Contoh gambar. Ganti dengan foto-foto kegiatan sekolah -->
-      <img src="header.jpg" alt="Gedung Sekolah">
-      <img src="header.jpg" alt="Kegiatan 1">
-      <img src="header.jpg" alt="Kegiatan 2">
-      <img src="header.jpg" alt="Kegiatan 3">
-    </div>
-  </section>
+<section id="galeri">
+<h2>Galeri</h2>
+<img src="header.jpg" alt="Foto Gedung Sekolah" style="width:100%; max-height:400px; object-fit:cover;">
+</section>
 
-  <!-- UPDATE GRISAKA (Berita Terbaru) -->
-  <section id="update-grisaka">
-    <h3>Update Grisaka</h3>
-    <div class="card-grid">
-      <article class="card">
+<section id="update-grisaka">
+<h2>Update Grisaka</h2>
+<div class="cards">
+    <div class="card">
         <img src="header.jpg" alt="Berita 1">
-        <div class="body">
-          <span class="badge">Berita</span>
-          <h4>Judul Berita Pertama</h4>
-          <p>Ringkasan singkat berita terbaru dari SMPN 1 Kandangan. Klik baca selengkapnya jika ada tautan.</p>
+        <div class="card-content">
+            <h3>Upacara HUT RI ke-80</h3>
+            <p>Upacara berjalan khidmat dengan partisipasi seluruh warga sekolah.</p>
         </div>
-      </article>
-      <article class="card">
+    </div>
+    <div class="card">
         <img src="header.jpg" alt="Berita 2">
-        <div class="body">
-          <span class="badge">Pengumuman</span>
-          <h4>Pengumuman Penting</h4>
-          <p>Contoh pengumuman untuk peserta didik/ortu. Anda bisa mengganti teks dan gambar sesuai kebutuhan.</p>
+        <div class="card-content">
+            <h3>Lomba Sains Nasional</h3>
+            <p>Perwakilan siswa meraih juara 1 bidang IPA tingkat kabupaten.</p>
         </div>
-      </article>
-      <article class="card">
+    </div>
+    <div class="card">
         <img src="header.jpg" alt="Berita 3">
-        <div class="body">
-          <span class="badge">Agenda</span>
-          <h4>Agenda Kegiatan Bulanan</h4>
-          <p>Jadwal kegiatan sekolah bulan ini. Tambahkan rincian kegiatan dan tautan jika diperlukan.</p>
+        <div class="card-content">
+            <h3>Pentas Seni Akhir Tahun</h3>
+            <p>Acara penampilan bakat dan kreativitas siswa berlangsung meriah.</p>
         </div>
-      </article>
     </div>
-  </section>
+</div>
+</section>
 
-  <!-- PRESTASI -->
-  <section id="prestasi">
-    <h3>Prestasi</h3>
-    <div class="card-grid">
-      <article class="card">
-        <div class="body">
-          <h4>Juara Umum Turnamen Futsal Kabupaten</h4>
-          <p>Tim futsal SMPN 1 Kandangan meraih juara umum pada turnamen futsal tingkat kabupaten.</p>
-        </div>
-      </article>
-      <article class="card">
-        <div class="body">
-          <h4>Olimpiade Sains</h4>
-          <p>Siswa meraih medali perak pada Olimpiade Sains tingkat provinsi.</p>
-        </div>
-      </article>
-      <article class="card">
-        <div class="body">
-          <h4>Lomba Literasi</h4>
-          <p>Ekstrakurikuler literasi memenangkan lomba menulis cerpen tingkat kabupaten.</p>
-        </div>
-      </article>
-    </div>
-  </section>
+<section id="prestasi">
+<h2>Prestasi</h2>
+<ul>
+    <li>Juara 1 Lomba Sains Nasional tingkat Kabupaten</li>
+    <li>Juara 2 Lomba Cerdas Cermat se-Karesidenan</li>
+</ul>
+</section>
 
-  <!-- KONTAK -->
-  <section id="kontak">
-    <h3>Kontak</h3>
-    <p><strong>Alamat:</strong> Jl. Balun, Caruban, Kandangan</p>
-    <p><strong>Email:</strong> info@smpn1kandangan.sch.id</p>
-    <p><strong>Telepon/WhatsApp:</strong> +62 822-2766-6553</p>
-  </section>
+<section id="kontak">
+<h2>Kontak</h2>
+<p>Alamat: Jl. Balun, Caruban, Kandangan</p>
+<p>Email: smpn1kandangan@email.com</p>
+<p>Telepon: 0812-3456-7890</p>
+</section>
 
-  <footer>
-    &copy; <span id="y"></span> SMP Negeri 1 Kandangan • Semua Hak Dilindungi
-  </footer>
+<footer>
+&copy; 2025 SMP Negeri 1 Kandangan
+</footer>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
